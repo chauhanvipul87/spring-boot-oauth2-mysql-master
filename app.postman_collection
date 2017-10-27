@@ -1,0 +1,175 @@
+{
+	"variables": [],
+	"info": {
+		"name": "app",
+		"_postman_id": "63b5fe83-94cc-a256-8fea-9848aebe7c35",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Session APIs",
+			"description": "",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8080/spring-boot-oauth2-mysql/oauth/token?grant_type=password&username=user1&password=password1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"spring-boot-oauth2-mysql",
+								"oauth",
+								"token"
+							],
+							"query": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "username",
+									"value": "user1",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "password1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bXktdHJ1c3RlZC1jbGllbnQ6c2VjcmV0",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8080/spring-boot-oauth2-mysql/oauth/token?grant_type=refresh_token&refresh_token=35f2d288-453d-4b45-ae4a-3725a3d313ce",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"spring-boot-oauth2-mysql",
+								"oauth",
+								"token"
+							],
+							"query": [
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "refresh_token",
+									"value": "35f2d288-453d-4b45-ae4a-3725a3d313ce",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bXktdHJ1c3RlZC1jbGllbnQ6c2VjcmV0",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"url": "http://localhost:8080/spring-boot-oauth2-mysql/user/logout",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer b49d3281-6694-4333-bc33-80262e5fffa4",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hello",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/spring-boot-oauth2-mysql/user/hello/?name=Harshad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"spring-boot-oauth2-mysql",
+						"user",
+						"hello",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Harshad",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer b49d3281-6694-4333-bc33-80262e5fffa4",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
